@@ -28,13 +28,12 @@ public class AlgoritmHash {
                 Map<Integer, String> map = putMap(text);
                 for (int i = 0; i < num; i++) {
                     temp=temp.concat(map.get(((int)(Math.random()*map.size()))));                }
-            }
-            else if (box1 == 1 && box2 == 1 && box3 == 0) {
+            }else if (box1 == 1 && box2 == 1 && box3 == 0) {
                 String text = standard + upper + digits;
                 Map<Integer, String> map = putMap(text);
                 for (int i = 0; i < num; i++) {
                     temp=temp.concat(map.get(((int)(Math.random()*map.size()))));                }
-            } else if (box1 == 1 && box2 == 1 && box3 == 1) {
+            }else if (box1 == 1 && box2 == 1 && box3 == 1) {
                 String text = standard + upper + digits + specSymbols;
                 Map<Integer, String> map = putMap(text);
                 for (int i = 0; i < num; i++) {
@@ -53,15 +52,14 @@ public class AlgoritmHash {
                 String text = standard + specSymbols;
                 Map<Integer, String> map = putMap(text);
                 for (int i = 0; i < num; i++) {
-                    temp=temp.concat(map.get(((int)(Math.random()*map.size()))));
-                }
+                    temp=temp.concat(map.get(((int)(Math.random()*map.size()))));                }
             }else if (box1 == 0 && box2 == 1 && box3 == 0) {
                 String text = standard + digits;
                 Map<Integer, String> map = putMap(text);
                 for (int i = 0; i < num; i++) {
-                    temp=temp.concat(map.get(((int)(Math.random()*map.size()))));
-                }
+                    temp=temp.concat(map.get(((int)(Math.random()*map.size()))));                }
             }
+
         }
         return temp;
     }
