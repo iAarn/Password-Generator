@@ -12,6 +12,7 @@ public class AppUI extends JFrame {
     JCheckBox checkBox3 = new JCheckBox("Special chars", false);
 
 
+
     private AppUI()
     {
         super("Password Generator");
@@ -40,14 +41,19 @@ public class AppUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox1.isSelected()){
-                algorithm2.setBox1(1);
+
+                AlgoritmHash.setBox1(1);
+
             }
         }
     }private class ListenerCheckBox2 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox2.isSelected()){
-                algorithm2.setBox2(1);
+
+                AlgoritmHash.setBox2(1);
+
+
             }
 
         }
@@ -55,7 +61,9 @@ public class AppUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox3.isSelected()){
-                algorithm2.setBox3(1);
+               AlgoritmHash.setBox3(1);
+
+
             }
         }
     }
@@ -69,8 +77,9 @@ public class AppUI extends JFrame {
     private class ListenerAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
-            area.setText(algorithm2.passGen(Integer.parseInt(text.getText())));
-            algorithm2.clearArray(true);
+
+           area.setText(AlgoritmHash.gPass(Integer.parseInt(text.getText())));
+
         }
     }
 
