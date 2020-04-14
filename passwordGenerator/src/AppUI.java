@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,19 +26,18 @@ public class AppUI extends JFrame {
         checkBox3.addActionListener(new ListenerCheckBox3());
         area.setText("Your Password : ");
 
-        JPanel conteiner = new JPanel();
-        conteiner.add(text);
-        conteiner.add(area);
-        conteiner.add(button);
-        conteiner.add(checkBox1);
-        conteiner.add(checkBox2);
-        conteiner.add(checkBox3);
+        JPanel container = new JPanel();
+        container.add(text);
+        container.add(area);
+        container.add(button);
+        container.add(checkBox1);
+        container.add(checkBox2);
+        container.add(checkBox3);
 
-        setContentPane(conteiner);
+        setContentPane(container);
         setSize(200, 200);
-        setAlwaysOnTop(true);
         setVisible(true);
-        setLocation(800,350);
+        setLocationRelativeTo(null);
     }
     private class ListenerCheckBox1 implements ActionListener{
         @Override
@@ -56,7 +56,6 @@ public class AppUI extends JFrame {
             }else{
                 AlgoritmHash.setBox2(0);
             }
-
         }
     }private class ListenerCheckBox3 implements ActionListener{
         @Override
@@ -78,11 +77,30 @@ public class AppUI extends JFrame {
     private class ListenerAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
-
-           area.setText(AlgoritmHash.gPass(Integer.parseInt(text.getText())));
-
+if(text.getText().isEmpty()){
+    setLocationRelativeTo(null);
+    JOptionPane.showMessageDialog(null,"Error! Text box is empty! Please, try to enter a number" );
+    setVisible(true);
+}else if(isInteger(text.getText()) == false){
+    setLocationRelativeTo(null);
+    JOptionPane.showMessageDialog(null,"Error! You entered the letter  Please, try to enter a number" );
+    setVisible(true);
+}
+else {
+    area.setText(AlgoritmHash.gPass(Integer.parseInt(text.getText())));
+}
         }
     }
+private static boolean isInteger(String s){
+        try{
+            Integer.parseInt(s);
+        }catch (NumberFormatException n){
+            return false;
+        }catch (NullPointerException nu){
+            return false;
+        }
+        return true;
+}
 
 
 
