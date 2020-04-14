@@ -35,7 +35,9 @@ public class AppUI extends JFrame {
 
         setContentPane(conteiner);
         setSize(200, 200);
+        setAlwaysOnTop(true);
         setVisible(true);
+        setLocation(800,350);
     }
     private class ListenerCheckBox1 implements ActionListener{
         @Override

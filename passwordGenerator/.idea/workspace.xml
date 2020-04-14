@@ -3,17 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fa23bc55-da2e-4907-8780-d1c07c84ba82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AlgoritmSwitch.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AlgoritmHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlgoritmHash.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AlgoritmSwitch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/algorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/test.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager" selected="Application.AppUI">
@@ -117,13 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586886836573</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="V1.0.1&#10;HashMap realization, algorithm corrections.">
+      <created>1586888781430</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586888781430</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1.0.0.2" />
     <MESSAGE value="V1.0.0.3&#10;HashMap realization." />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.0.0.3&#10;HashMap realization." />
+    <MESSAGE value="V1.0.1&#10;HashMap realization, algorithm corrections." />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.0.1&#10;HashMap realization, algorithm corrections." />
   </component>
   <component name="WindowStateProjectService">
     <state x="504" y="257" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1586547729937">
@@ -138,26 +146,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="546" y="313" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586627216840" />
-    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1586886836026">
+    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1586888780854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586886836026" />
-    <state width="1340" height="250" key="GridCell.Tab.0.bottom" timestamp="1586888707023">
+    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586888780854" />
+    <state width="1340" height="250" key="GridCell.Tab.0.bottom" timestamp="1586889720939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586888707023" />
-    <state width="1340" height="250" key="GridCell.Tab.0.center" timestamp="1586888707023">
+    <state width="1340" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586889720939" />
+    <state width="1340" height="250" key="GridCell.Tab.0.center" timestamp="1586889720939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586888707023" />
-    <state width="1340" height="250" key="GridCell.Tab.0.left" timestamp="1586888707023">
+    <state width="1340" height="250" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586889720939" />
+    <state width="1340" height="250" key="GridCell.Tab.0.left" timestamp="1586889720939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586888707023" />
-    <state width="1340" height="250" key="GridCell.Tab.0.right" timestamp="1586888707023">
+    <state width="1340" height="250" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586889720939" />
+    <state width="1340" height="250" key="GridCell.Tab.0.right" timestamp="1586889720939">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="250" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586888707023" />
+    <state width="1340" height="250" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586889720939" />
     <state x="515" y="256" key="IDE.errors.dialog" timestamp="1586361279431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -166,6 +174,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="290" y="239" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586547744721" />
+    <state x="837" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586889765976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="837" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586889765976" />
     <state x="1082" y="180" key="refactoring.ChangeSignatureDialog" timestamp="1586627153801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
