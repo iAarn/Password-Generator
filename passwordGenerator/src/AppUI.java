@@ -41,19 +41,18 @@ public class AppUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox1.isSelected()){
-
                 AlgoritmHash.setBox1(1);
-
+            }else {
+                AlgoritmHash.setBox1(0);
             }
         }
     }private class ListenerCheckBox2 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox2.isSelected()){
-
                 AlgoritmHash.setBox2(1);
-
-
+            }else{
+                AlgoritmHash.setBox2(0);
             }
 
         }
@@ -62,8 +61,8 @@ public class AppUI extends JFrame {
         public void actionPerformed(ActionEvent a) {
             if(checkBox3.isSelected()){
                AlgoritmHash.setBox3(1);
-
-
+            }else{
+                AlgoritmHash.setBox3(0);
             }
         }
     }

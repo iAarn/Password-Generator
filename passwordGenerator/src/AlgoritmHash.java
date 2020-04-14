@@ -55,6 +55,12 @@ public class AlgoritmHash {
                 for (int i = 0; i < num; i++) {
                     temp=temp.concat(map.get(((int)(Math.random()*map.size()))));
                 }
+            }else if (box1 == 0 && box2 == 1 && box3 == 0) {
+                String text = standard + digits;
+                Map<Integer, String> map = putMap(text);
+                for (int i = 0; i < num; i++) {
+                    temp=temp.concat(map.get(((int)(Math.random()*map.size()))));
+                }
             }
         }
         return temp;
