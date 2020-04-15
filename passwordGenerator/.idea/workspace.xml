@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa23bc55-da2e-4907-8780-d1c07c84ba82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerCheckBox3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI$ListenerInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/passwordGenerator/AppUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +58,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="generator" />
+    <configuration name="sda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sda" />
       <module name="passwordGenerator" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,10 +75,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.AppUI" />
+        <item itemvalue="Application.sda" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.AlgoritmHash" />
         <item itemvalue="Application.algorithm2" />
-        <item itemvalue="Application.generator" />
       </list>
     </recent_temporary>
   </component>
@@ -134,14 +128,22 @@
       <option name="project" value="LOCAL" />
       <updated>1586893915525</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="V1.0.1.1&#10;Added checks.">
+      <created>1586894752956</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586894752956</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="V1.0.0.2" />
     <MESSAGE value="V1.0.0.3&#10;HashMap realization." />
     <MESSAGE value="V1.0.1&#10;HashMap realization, algorithm corrections." />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.0.1&#10;HashMap realization, algorithm corrections." />
+    <MESSAGE value="V1.0.1.1&#10;Added checks." />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.0.1.1&#10;Added checks." />
   </component>
   <component name="WindowStateProjectService">
     <state x="504" y="257" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog" timestamp="1586547729937">
@@ -156,26 +158,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="546" y="313" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586890351288" />
-    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1586893914972">
+    <state x="587" y="88" key="CommitChangelistDialog2" timestamp="1586894752398">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586893914972" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1586894350493">
+    <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586894752398" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1586972025036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586894350493" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1586894350493">
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1586972025036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586894350493" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1586894350493">
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1586972025036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586894350493" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1586894350493">
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1586972025036">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586894350493" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
     <state x="515" y="256" key="IDE.errors.dialog" timestamp="1586361279431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -2,6 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyListener;
 
 public class AppUI extends JFrame {
     JButton button = new JButton("Generate");
@@ -21,6 +24,28 @@ public class AppUI extends JFrame {
         text.setToolTipText("Set password length");
         text.addActionListener(new ListenerInput());
         button.addActionListener(new ListenerAction());
+        text.addKeyListener(new KeyAdapter() {
+            public void keyReleased(KeyEvent e) {
+
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (text.getText().isEmpty()) {
+                        setLocationRelativeTo(null);
+                        JOptionPane.showMessageDialog(null, "Error! Text box is empty! Please, try to enter a number");
+                        setVisible(true);
+                    } else if (!isInteger(text.getText())) {
+                        setLocationRelativeTo(null);
+                        JOptionPane.showMessageDialog(null, "Error! You entered the letter  Please, try to enter a number");
+                        setVisible(true);
+                    } else if ((Integer.parseInt(text.getText()) > 25) || Integer.parseInt(text.getText()) <= 0) {
+                        setLocationRelativeTo(null);
+                        JOptionPane.showMessageDialog(null, "Error! Entered number is out of range! Max length of password if 25 numbers.");
+                        setVisible(true);
+                    } else {
+                        area.setText(AlgoritmHash.gPass(Integer.parseInt(text.getText())));
+                    }
+                }
+            }
+        });
         checkBox1.addActionListener(new ListenerCheckBox1());
         checkBox2.addActionListener(new ListenerCheckBox2());
         checkBox3.addActionListener(new ListenerCheckBox3());
@@ -39,6 +64,7 @@ public class AppUI extends JFrame {
         setVisible(true);
         setLocationRelativeTo(null);
     }
+
     private class ListenerCheckBox1 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
@@ -81,7 +107,7 @@ if(text.getText().isEmpty()){
     setLocationRelativeTo(null);
     JOptionPane.showMessageDialog(null,"Error! Text box is empty! Please, try to enter a number" );
     setVisible(true);
-}else if(isInteger(text.getText()) == false){
+}else if(!isInteger(text.getText())){
     setLocationRelativeTo(null);
     JOptionPane.showMessageDialog(null,"Error! You entered the letter  Please, try to enter a number" );
     setVisible(true);
@@ -95,15 +121,14 @@ else {
 }
         }
     }
+
 private static boolean isInteger(String s){
         try{
             Integer.parseInt(s);
-        }catch (NumberFormatException n){
-            return false;
-        }catch (NullPointerException nu){
+        }catch (NumberFormatException | NullPointerException n){
             return false;
         }
-        return true;
+    return true;
 }
 
 
