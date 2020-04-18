@@ -28,15 +28,11 @@ public class AppUI extends JFrame {
         text.setToolTipText("Set password length");
         text.addActionListener(new ListenerInput());
         button.addActionListener(new ListenerAction());
-        copy.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                String ctc = area.getText().toString();
-                StringSelection stringSelection = new StringSelection(ctc);
-                Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
-                clpbrd.setContents(stringSelection, null);
-            }
-
+        copy.addActionListener(actionEvent -> {
+            String ctc = area.getText();
+            StringSelection stringSelection = new StringSelection(ctc);
+            Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
+            clpbrd.setContents(stringSelection, null);
         });
         text.addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
