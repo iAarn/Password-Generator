@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyAdapter;
-import java.awt.event.KeyListener;
+
 
 public class AppUI extends JFrame {
     JButton button = new JButton("Generate");
@@ -51,7 +51,7 @@ public class AppUI extends JFrame {
                         JOptionPane.showMessageDialog(null, "Error! Entered number is out of range! Max length of password if 25 numbers.");
                         setVisible(true);
                     } else {
-                        area.setText(AlgoritmHash.gPass(Integer.parseInt(text.getText())));
+                        area.setText(AlgorithmHash.gPass(Integer.parseInt(text.getText())));
                     }
                 }
             }
@@ -60,7 +60,6 @@ public class AppUI extends JFrame {
         checkBox2.addActionListener(new ListenerCheckBox2());
         checkBox3.addActionListener(new ListenerCheckBox3());
         area.setText("Your Password : ");
-
 
         JPanel container = new JPanel();
 
@@ -72,39 +71,39 @@ public class AppUI extends JFrame {
         container.add(checkBox2);
         container.add(checkBox3);
         setResizable(false);
-
-
+    getRootPane().setDefaultButton(button);
         setContentPane(container);
         setSize(200, 200);
         setVisible(true);
         setLocationRelativeTo(null);
     }
-
     private class ListenerCheckBox1 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox1.isSelected()){
-                AlgoritmHash.setBox1(1);
+                AlgorithmHash.setBox1(1);
             }else {
-                AlgoritmHash.setBox1(0);
+                AlgorithmHash.setBox1(0);
             }
         }
-    }private class ListenerCheckBox2 implements ActionListener{
+    }
+    private class ListenerCheckBox2 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox2.isSelected()){
-                AlgoritmHash.setBox2(1);
+                AlgorithmHash.setBox2(1);
             }else{
-                AlgoritmHash.setBox2(0);
+                AlgorithmHash.setBox2(0);
             }
         }
-    }private class ListenerCheckBox3 implements ActionListener{
+    }
+    private class ListenerCheckBox3 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox3.isSelected()){
-               AlgoritmHash.setBox3(1);
+               AlgorithmHash.setBox3(1);
             }else{
-                AlgoritmHash.setBox3(0);
+                AlgorithmHash.setBox3(0);
             }
         }
     }
@@ -118,26 +117,25 @@ public class AppUI extends JFrame {
     private class ListenerAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
-if(text.getText().isEmpty()){
+        if(text.getText().isEmpty()){
     setLocationRelativeTo(null);
     JOptionPane.showMessageDialog(null,"Error! Text box is empty! Please, try to enter a number" );
     setVisible(true);
-}else if(!isInteger(text.getText())){
+}       else if(!isInteger(text.getText())){
     setLocationRelativeTo(null);
     JOptionPane.showMessageDialog(null,"Error! You entered the letter  Please, try to enter a number" );
     setVisible(true);
-}else if((Integer.parseInt(text.getText())>25)  || Integer.parseInt(text.getText())<=0){
+}       else if((Integer.parseInt(text.getText())>25)  || Integer.parseInt(text.getText())<=0){
     setLocationRelativeTo(null);
     JOptionPane.showMessageDialog(null,"Error! Entered number is out of range! Max length of password if 25 numbers." );
     setVisible(true);
 }
-else {
-    area.setText(AlgoritmHash.gPass(Integer.parseInt(text.getText())));
+        else {
+    area.setText(AlgorithmHash.gPass(Integer.parseInt(text.getText())));
 }
         }
     }
-
-private static boolean isInteger(String s){
+    private static boolean isInteger(String s){
         try{
             Integer.parseInt(s);
         }catch (NumberFormatException | NullPointerException n){
@@ -145,14 +143,7 @@ private static boolean isInteger(String s){
         }
     return true;
 }
-
-
-
     public static void main (String[]args){
-        AppUI app = new AppUI();
-
-
+        new AppUI();
     }
-
 }
-
