@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fa23bc55-da2e-4907-8780-d1c07c84ba82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AlgorithmHash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlgorithmHash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,10 +152,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="504" y="257" key="#com.intellij.codeInsight.i18n.I18nizeQuickFixDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586547729937" />
-    <state x="740" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1586886649406">
+    <state x="740" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1587574256816">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586886649406" />
+    <state x="740" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587574256816" />
     <state x="546" y="313" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1586890351288">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -162,22 +164,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586894752398" />
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1586972025036">
+    <state width="1877" height="265" key="GridCell.Tab.0.bottom" timestamp="1587574361224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
-    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1586972025036">
+    <state width="1877" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587574361224" />
+    <state width="1877" height="265" key="GridCell.Tab.0.center" timestamp="1587574361224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
-    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1586972025036">
+    <state width="1877" height="265" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587574361224" />
+    <state width="1877" height="265" key="GridCell.Tab.0.left" timestamp="1587574361224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
-    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1586972025036">
+    <state width="1877" height="265" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587574361224" />
+    <state width="1877" height="265" key="GridCell.Tab.0.right" timestamp="1587574361224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586972025036" />
+    <state width="1877" height="265" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587574361224" />
     <state x="515" y="256" key="IDE.errors.dialog" timestamp="1586361279431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -190,9 +192,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="837" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586889765976" />
-    <state x="1082" y="180" key="refactoring.ChangeSignatureDialog" timestamp="1586627153801">
+    <state x="1082" y="180" key="refactoring.ChangeSignatureDialog" timestamp="1587570816074">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1082" y="180" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586627153801" />
+    <state x="1082" y="180" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587570816074" />
   </component>
 </project>

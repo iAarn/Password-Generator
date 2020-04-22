@@ -9,6 +9,10 @@ import java.awt.event.KeyAdapter;
 
 
 public class AppUI extends JFrame {
+    private int box1;
+    private int box2;
+    private int box3;
+
     JButton button = new JButton("Generate");
 
     JButton copy = new JButton("Copy");
@@ -18,8 +22,6 @@ public class AppUI extends JFrame {
     JCheckBox checkBox1 = new JCheckBox("Upper Case", false);
     JCheckBox checkBox2 = new JCheckBox("Digits", false);
     JCheckBox checkBox3 = new JCheckBox("Special chars", false);
-
-
 
     private AppUI()
     {
@@ -36,24 +38,8 @@ public class AppUI extends JFrame {
         });
         text.addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
-
-                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                    if (text.getText().isEmpty()) {
-                        setLocationRelativeTo(null);
-                        JOptionPane.showMessageDialog(null, "Error! Text box is empty! Please, try to enter a number");
-                        setVisible(true);
-                    } else if (!isInteger(text.getText())) {
-                        setLocationRelativeTo(null);
-                        JOptionPane.showMessageDialog(null, "Error! You entered the letter  Please, try to enter a number");
-                        setVisible(true);
-                    } else if ((Integer.parseInt(text.getText()) > 25) || Integer.parseInt(text.getText()) <= 0) {
-                        setLocationRelativeTo(null);
-                        JOptionPane.showMessageDialog(null, "Error! Entered number is out of range! Max length of password if 25 numbers.");
-                        setVisible(true);
-                    } else {
-                        area.setText(AlgorithmHash.gPass(Integer.parseInt(text.getText())));
-                    }
-                }
+               if(e.getKeyCode() == KeyEvent.VK_ENTER){ new AlgorithmHash(text.getText(), box1, box2, box3);
+               area.setText(AlgorithmHash.getText());}
             }
         });
         checkBox1.addActionListener(new ListenerCheckBox1());
@@ -78,12 +64,13 @@ public class AppUI extends JFrame {
         setLocationRelativeTo(null);
     }
     private class ListenerCheckBox1 implements ActionListener{
+
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox1.isSelected()){
-                AlgorithmHash.setBox1(1);
+                box1=1;
             }else {
-                AlgorithmHash.setBox1(0);
+                box1=0;
             }
         }
     }
@@ -91,9 +78,9 @@ public class AppUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox2.isSelected()){
-                AlgorithmHash.setBox2(1);
+                box2=1;
             }else{
-                AlgorithmHash.setBox2(0);
+               box2=0;
             }
         }
     }
@@ -101,9 +88,9 @@ public class AppUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent a) {
             if(checkBox3.isSelected()){
-               AlgorithmHash.setBox3(1);
+               box3=1;
             }else{
-                AlgorithmHash.setBox3(0);
+              box3=0;
             }
         }
     }
@@ -117,22 +104,8 @@ public class AppUI extends JFrame {
     private class ListenerAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
-        if(text.getText().isEmpty()){
-    setLocationRelativeTo(null);
-    JOptionPane.showMessageDialog(null,"Error! Text box is empty! Please, try to enter a number" );
-    setVisible(true);
-}       else if(!isInteger(text.getText())){
-    setLocationRelativeTo(null);
-    JOptionPane.showMessageDialog(null,"Error! You entered the letter  Please, try to enter a number" );
-    setVisible(true);
-}       else if((Integer.parseInt(text.getText())>25)  || Integer.parseInt(text.getText())<=0){
-    setLocationRelativeTo(null);
-    JOptionPane.showMessageDialog(null,"Error! Entered number is out of range! Max length of password if 25 numbers." );
-    setVisible(true);
-}
-        else {
-    area.setText(AlgorithmHash.gPass(Integer.parseInt(text.getText())));
-}
+          new AlgorithmHash(text.getText(), box1, box2, box3);
+          area.setText(AlgorithmHash.getText());
         }
     }
     private static boolean isInteger(String s){
