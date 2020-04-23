@@ -9,9 +9,6 @@ import java.awt.event.KeyAdapter;
 
 
 public class AppUI extends JFrame {
-    private int box1;
-    private int box2;
-    private int box3;
 
     JButton button = new JButton("Generate");
 
@@ -28,7 +25,6 @@ public class AppUI extends JFrame {
         super("Password Generator");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         text.setToolTipText("Set password length");
-        text.addActionListener(new ListenerInput());
         button.addActionListener(new ListenerAction());
         copy.addActionListener(actionEvent -> {
             String ctc = area.getText();
@@ -38,8 +34,11 @@ public class AppUI extends JFrame {
         });
         text.addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
-               if(e.getKeyCode() == KeyEvent.VK_ENTER){ new AlgorithmHash(text.getText(), box1, box2, box3);
-               area.setText(AlgorithmHash.getText());}
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (AlgorithmHash.CharsValidator(text.getText()) == true) {
+                        area.setText(AlgorithmHash.Algorithm(Integer.parseInt(text.getText()), checkBox1.isSelected(), checkBox2.isSelected(), checkBox3.isSelected()));
+                    }
+                }
             }
         });
         checkBox1.addActionListener(new ListenerCheckBox1());
@@ -57,7 +56,6 @@ public class AppUI extends JFrame {
         container.add(checkBox2);
         container.add(checkBox3);
         setResizable(false);
-    getRootPane().setDefaultButton(button);
         setContentPane(container);
         setSize(200, 200);
         setVisible(true);
@@ -67,55 +65,28 @@ public class AppUI extends JFrame {
 
         @Override
         public void actionPerformed(ActionEvent a) {
-            if(checkBox1.isSelected()){
-                box1=1;
-            }else {
-                box1=0;
-            }
+
         }
     }
     private class ListenerCheckBox2 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
-            if(checkBox2.isSelected()){
-                box2=1;
-            }else{
-               box2=0;
-            }
+
         }
     }
     private class ListenerCheckBox3 implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
-            if(checkBox3.isSelected()){
-               box3=1;
-            }else{
-              box3=0;
-            }
-        }
-    }
-    private class ListenerInput implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent a) {
-            String temp = text.getText();
-            int num = Integer.parseInt(temp);
+
         }
     }
     private class ListenerAction implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent a) {
-          new AlgorithmHash(text.getText(), box1, box2, box3);
-          area.setText(AlgorithmHash.getText());
-        }
+            if (AlgorithmHash.CharsValidator(text.getText()) == true) {
+                area.setText(AlgorithmHash.Algorithm(Integer.parseInt(text.getText()), checkBox1.isSelected(), checkBox2.isSelected(), checkBox3.isSelected()));
+            }    }
     }
-    private static boolean isInteger(String s){
-        try{
-            Integer.parseInt(s);
-        }catch (NumberFormatException | NullPointerException n){
-            return false;
-        }
-    return true;
-}
     public static void main (String[]args){
         new AppUI();
     }

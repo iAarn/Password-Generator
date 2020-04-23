@@ -1,6 +1,7 @@
+import javafx.scene.control.CheckBox;
+
 import javax.swing.*;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class AlgorithmHash {
     final static String standard = "qwertyuiopasdfghjklzxcvbnm";
@@ -9,62 +10,39 @@ public class AlgorithmHash {
     final static String specSymbols = "!#$%&'()*+,-./:;<=>?@[]^_`{|}";
     private static String text = "";
 
-    private static Map<Integer, String> putMap(String text){
-        Map<Integer, String> map = new LinkedHashMap<>();
+    private static ArrayList<String> putList(String text){
+        ArrayList<String> list = new ArrayList<>();
         for(int j=0;j<text.length();j++){
             char index = text.charAt(j);
             String t = String.valueOf(index);
-            map.put(j, t);
+            list.add(t);
         }
-        return map;
+        return list;
     }
+public static Boolean CharsValidator (String text) {
+        boolean temp = false;
+    if (text.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Error! Text box is empty! Please, try to enter a number");
+    }
+    if (!isInteger(text)) {
+        JOptionPane.showMessageDialog(null, "Error! You entered the letter!  Please, try to enter a number");
+    }
+    if ((Integer.parseInt(text) > 25) || Integer.parseInt(text) <= 0) {
+        JOptionPane.showMessageDialog(null, "Error! Entered number is out of range! Max length of password if 25 numbers.");
+    }
+     else if (isInteger(text)) temp =true;
+    return temp; }
 
-    public AlgorithmHash(String temp, int box1, int box2, int box3) {
-        if (temp.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Error! Text box is empty! Please, try to enter a number");
-        } else if (!isInteger(temp)) {
-            JOptionPane.showMessageDialog(null, "Error! You entered the letter!  Please, try to enter a number");
-        } else if ((Integer.parseInt(temp) > 25) || Integer.parseInt(temp) <= 0) {
-            JOptionPane.showMessageDialog(null, "Error! Entered number is out of range! Max length of password if 25 numbers.");
-        } else {
-                int num = Integer.parseInt(temp);
-                 text = "";
-                if (box1 == 0 && box2 == 0 && box3 == 0) {
-                    Map<Integer, String> map = putMap(standard);
-                    for (int i = 0; i < num; i++) {
-                        int r = (int) (Math.random()*map.size());
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }else if (box1 == 1 && box2 == 0 && box3 == 0) {
-                    Map<Integer, String> map = putMap(standard + upper);
-                    for (int i = 0; i < num; i++) {
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }else if (box1 == 1 && box2 == 1 && box3 == 0) {
-                    Map<Integer, String> map = putMap(standard + upper + digits);
-                    for (int i = 0; i < num; i++) {
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }else if (box1 == 1 && box2 == 1 && box3 == 1) {
-                    Map<Integer, String> map = putMap(standard + upper + digits + specSymbols);
-                    for (int i = 0; i < num; i++) {
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }else if (box1 == 0 && box2 == 1 && box3 == 1) {
-                    Map<Integer, String> map = putMap(standard + digits + specSymbols);
-                    for (int i = 0; i < num; i++) {
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }else if (box1 == 1 && box2 == 0 && box3 == 1) {
-                    Map<Integer, String> map = putMap(standard + upper + specSymbols);
-                    for (int i = 0; i < num; i++) {
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }else if (box1 == 0 && box2 == 0 && box3 == 1) {
-                    Map<Integer, String> map = putMap(standard + specSymbols);
-                    for (int i = 0; i < num; i++) {
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }else if (box1 == 0 && box2 == 1 && box3 == 0) {
-                    Map<Integer, String> map = putMap(standard + digits);
-                    for (int i = 0; i < num; i++) {
-                        text=text.concat(map.get(((int)(Math.random()*map.size()))));                }
-                }
-        }
-    }
+    public static String Algorithm (int number, boolean checkBox1, boolean checkBox2, boolean checkBox3){
+        ArrayList<String> list = putList(standard);
+        if(checkBox1)list.addAll(putList(upper));
+        if(checkBox2)list.addAll(putList(digits));
+        if(checkBox3)list.addAll(putList(specSymbols));
+        String text = "";
+        Collections.shuffle(list);
+        for (int i=0; i<number;i++){
+            text=text.concat(list.get(i));}
+            return text;}
 
     public static String getText() {
         return text;
